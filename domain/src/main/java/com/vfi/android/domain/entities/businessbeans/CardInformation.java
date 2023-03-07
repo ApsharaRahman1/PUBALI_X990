@@ -83,7 +83,7 @@ public class CardInformation {
     }
 
     public void setPan(String pan) {
-        this.pan = pan;
+        this.pan =  pan;
     }
 
     public String getTrack1() {
