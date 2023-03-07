@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="host_manage_dialog_items">
+        <item>@string/setting_host_edit</item>
+        <item>@string/setting_host_test_host</item>
+        <item>@string/setting_host_load_tmk</item>
+        <item>@string/setting_host_load_twk</item>
+    </integer-array>
+</resources>

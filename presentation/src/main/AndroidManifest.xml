@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vfi.android.payment">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.verifone.android.pup.keyfactory.READ_PERMISSION" /> <!-- permission to read database from key factory -->
+    <uses-permission android:name="com.verifone.android.pup.keyfactory.READ_PERMISSION" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name=".presentation.AndroidApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".presentation.view.activities.ChooseInstallmentPromoPromoActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity android:name=".presentation.view.activities.ChooseInstallmentTermActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.AutoSettlementActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <receiver
+            android:name=".presentation.receivers.AutoSettlementReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.verifone.payment.action.SET_AUTO_SETTLEMENT_TIMER" />
+                <action android:name="com.verifone.payment.action.AUTO_SETTLEMENT" />
+                <action android:name="com.verifone.payment.action.SET_AUTO_SETTLEMENT_FAILED_TIMER" />
+                <action android:name="com.verifone.payment.action.FAILED_RE_SETTLEMENT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.verifone.payment.action.CLEAR_AUTO_SETTLEMENT_FAILED_TIMER" />
+                <action android:name="com.verifone.payment.action.CLEAR_AUTO_SETTLEMENT_TIMER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".presentation.receivers.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".presentation.receivers.ForceSettlementReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.verifone.payment.action.FORCE_SETTLEMENT" />
+                <action android:name="com.verifone.payment.action.SET_FORCE_SETTLEMENT_TIMER" />
+                <action android:name="com.verifone.payment.action.CLEAR_FORCE_SETTLEMENT_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".presentation.view.activities.InputCVV2Activity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.ElectronicSignActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.TransSuccessActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.NetworkProcessActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputPinActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.EmvProcessActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputTipAmountActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputAmountActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.CheckCardActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.SplashActivity"
+            android:theme="@style/AppThemeFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.view.activities.MainMenuActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.SubMenuActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.CheckPasswdActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputInvoiceNumActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.ShowTransInfoActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.TransFailedActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.option.OptionActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputCardNumActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputCardExpiryDateActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.SettlementActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.history.HistoryActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.history.HistoryDetailActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputOrgTransDateActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputOrgAuthCodeActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputOrgRefNumActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.InputApprovalCodeActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.setting.SettingActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".presentation.view.activities.SelectHostMerchantActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity android:name=".presentation.view.activities.base.BaseSettingItemAcitivity" />
+        <activity android:name=".presentation.view.activities.setting.ConfigurationSettingAcitivity" />
+        <activity android:name=".presentation.view.activities.setting.CommunicationSettingActivity" />
+        <activity android:name=".presentation.view.activities.option.ReprintActivity" />
+        <activity android:name=".presentation.view.activities.setting.KeyManagementSettingActivity" />
+    </application>
+
+</manifest>

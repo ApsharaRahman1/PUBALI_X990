@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.view.activities.InputOrgRefNumActivity">
+    <include layout="@layout/layout_under_title_line" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:text="@string/tv_hint_please_enter_original_ref_num"
+        android:textColor="@color/color_hint_font"
+        android:textSize="@dimen/dimen_head_hint_text_size" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_show_original_ref_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_font"
+        android:textSize="28sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/dimen_underline_margin"
+        android:layout_marginRight="@dimen/dimen_underline_margin"
+        android:gravity="center"
+        android:src="@drawable/under_line"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/layout_digital_keyboard" />
+    <Button
+        android:id="@+id/btn_keyboard_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_button_height"
+        android:background="@color/color_gray_blue"
+        android:text="@string/btn_hint_confirm"
+        android:textSize="@dimen/dimen_button_textsize"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white" />
+</LinearLayout>

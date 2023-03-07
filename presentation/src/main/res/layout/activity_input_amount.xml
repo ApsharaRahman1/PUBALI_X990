@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.vfi.android.payment.presentation.view.activities.InputAmountActivity">
+
+    <TextView
+        android:id="@+id/tv_hint_msg_input_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginTop="@dimen/common_top_margin"
+        android:text="@string/tv_hint_msg_input_amount"
+        android:textColor="@color/color_hint_font"
+        android:textSize="@dimen/dimen_head_hint_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />-->
+
+    <TextView
+        android:id="@+id/tv_show_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:maxLines="2"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:text="0.00"
+        android:textColor="@color/color_font"
+        android:textSize="90sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hint_msg_input_amount" />
+
+    <LinearLayout
+        android:id="@+id/keyboardLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_amount">
+
+       <include layout="@layout/layout_digital_keyboard" />
+
+        <Button
+            android:id="@+id/btn_keyboard_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_button_height"
+            android:background="@color/color_gray_blue"
+            android:text="@string/btn_hint_pay"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dimen_button_textsize" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

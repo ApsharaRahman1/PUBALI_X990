@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_digitalKeyboardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.vfi.android.payment.presentation.view.widget.DigitalKeyboardView
+            android:id="@+id/keyboardview_digital"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/bg_keyboard_btn"
+            android:keyPreviewLayout="@layout/layout_keyboard_preview"
+            android:keyTextColor="@color/color_keyboard_number"
+            android:keyTextSize="38sp"
+            android:paddingTop="1dp"
+            android:shadowColor="#ffffff"
+            android:shadowRadius="0.0" />
+    </LinearLayout>
+</merge>

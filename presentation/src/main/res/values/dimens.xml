@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_left_margin">15dp</dimen>
+    <dimen name="dimen_input_hint_left_margin">45dp</dimen>
+    <dimen name="margin_bottom_to_keyboard">20dp</dimen>
+    <dimen name="dimen_amount_text_size">44sp</dimen>
+    <dimen name="dimen_head_hint_text_size">18sp</dimen>
+    <dimen name="dimen_card_info_hint_text_size">16sp</dimen>
+    <dimen name="dimen_card_info_text_size">20sp</dimen>
+    <dimen name="dimen_button_height">60dp</dimen>
+    <dimen name="dimen_button_textsize">18sp</dimen>
+    <dimen name="dimen_refund_ali_text">13dp</dimen>
+    <dimen name="dimen_option_text_size">18dp</dimen>
+    <dimen name="dimen_toolbar_status_high">116px</dimen>
+    <dimen name="dimen_underline_margin">65dp</dimen>
+    <dimen name="dimen_btn_botton">30dp</dimen>
+    <dimen name="common_top_margin">15dp</dimen>
+</resources>

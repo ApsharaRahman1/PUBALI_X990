@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_under_title_line" />
+
+    <TextView
+        android:id="@+id/tv_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_input_hint_left_margin"
+        android:text="@string/tv_hint_enter_pin"
+        android:textColor="@color/color_hint_font"
+        android:textSize="@dimen/dimen_head_hint_text_size" />
+
+
+
+    <include layout="@layout/layout_passwd_box" />
+
+    <include layout="@layout/layout_digital_keyboard" />
+
+    <Button
+        android:id="@+id/btn_keyboard_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_button_height"
+        android:background="@color/color_gray_blue"
+        android:text="@string/btn_hint_confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_button_textsize"
+        tools:ignore="TextContrastCheck" />
+</LinearLayout>
