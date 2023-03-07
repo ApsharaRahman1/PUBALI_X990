@@ -99,8 +99,13 @@ public class CardInformation {
     }
 
     public void setTrack2(String track2) {
-        this.track2 = track2;
-    }
+        if(track2.length()%2==0){
+            this.track2 = track2;
+        }else{
+            this.track2 = track2+"F";
+        }
+
+    } //apshara
 
     public String getTrack3() {
         return track3;
